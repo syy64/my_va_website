@@ -1,23 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!-- ========== EDIT PAGE TITLE HERE ========== -->
+<title>Your Name — Virtual Assistant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,opsz,wght@0,6..8,300;0,6..8,400;0,6..8,500;0,6..8,600;1,6..8,300;1,6..8,400;1,6..8,500&family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 
-<!doctype html><html data-build-id="f0ecac8d7c" data-git-hash="40486f01ab4210513f7348d95c54b4f0ecac8d7c" data-build-timestamp="1774916925" data-version="1.0.0" data-env="" lang="en" data-theme="claude" data-mode="dark" class="h-screen antialiased scroll-smooth"><head data-ion-ip-country="NG"><link rel="preconnect" href="https://assets-proxy.anthropic.com" crossorigin><link rel="dns-prefetch" href="https://assets-proxy.anthropic.com"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Claude</title><meta name="description" content="Claude is Anthropic's AI, built for problem solvers. Tackle complex challenges, analyze data, write code, and think through your hardest work."><meta name="apple-itunes-app" content="app-id=6473753684"><meta property="og:type" content="website"><meta property="og:site_name" content="Claude"><meta property="og:image" content="https://claude.ai/images/claude_ogimage.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><link rel="icon" type="image/svg+xml" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/cd02a42d9-Vq_H3mgS.svg"><link rel="icon" type="image/png" sizes="32x32" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/ce67964e7-CAX1bqSh.png"><link rel="icon" type="image/png" sizes="16x16" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c03e51811-DebilQLI.png"><link rel="shortcut icon" href="/favicon.ico"><link rel="apple-touch-icon" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c129d018a-jJjJELY8.png"><link rel="apple-touch-startup-image" href="/images/claude_app_icon.png"><link rel="manifest" href="/manifest.json"><meta name="mobile-web-app-capable" content="yes"><link rel="preload" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/cc27851ad-CFxw3nG7.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c66fc489e-C-BHYa_K.woff2" as="font" type="font/woff2" crossorigin><script nonce="vV+77iIci9MDz9TXMUZKXA==">void 0===globalThis.process&&(globalThis.process={env:{},cwd:function(){return"/"}}),void 0===globalThis.global&&(globalThis.global=globalThis)</script><script type="application/ld+json" nonce="vV+77iIci9MDz9TXMUZKXA==">{
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebSite",
-            "name": "Claude",
-            "alternateName": ["Claude.ai", "Claude by Anthropic"],
-            "url": "https://claude.com"
-          },
-          {
-            "@type": "Organization",
-            "name": "Anthropic",
-            "url": "https://www.anthropic.com",
-            "logo": "https://claude.ai/images/claude_ogimage.png",
-            "sameAs": [
-              "https://x.com/AnthropicAI",
-              "https://www.linkedin.com/company/anthropic",
-              "https://www.youtube.com/@anthropic-ai"
-            ]
-          }
-        ]
-      }</script><script nonce="vV+77iIci9MDz9TXMUZKXA==">!function(){try{performance.mark?.("rq_cache:preload_start");const e="keyval-store",o="keyval",r="react-query-cache",t=new Promise(t=>{if(!window.indexedDB)return void t(void 0);const c=indexedDB.open(e);c.onupgradeneeded=()=>{c.transaction?.abort()},c.onerror=()=>t(void 0),c.onsuccess=()=>{const a=c.result;if(!a.objectStoreNames.contains(o))return a.close(),indexedDB.deleteDatabase(e),void t(void 0);try{const e=a.transaction(o,"readonly").objectStore(o).get(r);e.onerror=()=>{a.close(),t(void 0)},e.onsuccess=()=>{a.close(),window.__PRELOADED_IDB_CACHE_RESULT__=e.result,t(e.result)}}catch{a.close(),t(void 0)}}});window.__PRELOADED_IDB_CACHE__=t,performance.measure?.("rq_cache:preload_exec",{start:"rq_cache:preload_start"})}catch{}}()</script><script type="module" crossorigin src="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/index-Cd6vGlT7.js" nonce="vV+77iIci9MDz9TXMUZKXA=="></script><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/vendor-h3EqNXQn.js"><link rel="modulepreload" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/tree-sitter-4N43mTg-.js"><link rel="stylesheet" crossorigin href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c6a992d55-yUhMXbti.css"></head><body class="bg-bg-100 text-text-100 font-ui min-h-screen"><div id="root"></div><script nonce="vV+77iIci9MDz9TXMUZKXA==">(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.nonce='vV+77iIci9MDz9TXMUZKXA==';d.innerHTML="window.__CF$cv$params={r:'9e4fcc35483486d0',t:'MTc3NDk2NDc1OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='vV+77iIci9MDz9TXMUZKXA==';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
+:root{
+  --blush:#FDF0F3;
+  --blush-deep:#FAE4EA;
+  --petal:#F7D6E0;
+  --rose:#EDA8BE;
+  --rose-deep:#D4788F;
+  --dusty:#C25A75;
+  --wine:#8B3455;
+  --plum:#3D1A26;
+  --plum-soft:#6B3A4A;
+  --muted:#A8788A;
+  --gold:#C9956A;
+  --gold-lt:#F5E8DC;
+  --cream:#FEFAF8;
+  --white:#FFFFFF;
+  --border:rgba(61,26,38,.08);
+  --border-rose:rgba(196,120,143,.25);
+  --r:8px;
+  --rr:20px;
+}
+
+html{scroll-behavior:smooth}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--blush)}
+::-webkit-scrollbar-thumb{background:var(--rose);border-radius:3px}
+
+body{font-family:'Jost',sans-serif;background:var(--blush);color:var(--plum);font-size:16px;line-height:1.75;overflow-x:hidden}
+h1,h2,h3{font-family:'Cormorant Garamond',serif}
+h1{font-size:clamp(2.9rem,5.8vw,5.4rem);font-weight:400;line-height:1.06;letter-spacing:-.02em}
+h2{font-size:clamp(2rem,4vw,3.4rem);font-weight:400;line-height:1.12;letter-spacing:-.015em}
+h3{font-size:1.15rem;font-weight:500;line-height:1.35;font-family:'Cormorant Garamond',serif}
+p{font-weight:300;color:var(--plum-soft)}
+a{text-decoration:none;color:inherit}
+.container{max-width:1160px;margin:0 auto;padding:0 2rem}
+section{padding:7.5rem 0}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:1.1rem 0;background:rgba(253,240,243,.92);backdrop-filter:blur(24px);border-bottom:1px solid var(--border-rose);transition:box-shadow .3s}
+nav.scrolled{box-shadow:0 4px 32px rgba(61,26,38,.08)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:500;letter-spacing:.02em;color:var(--plum)}
+.nav-logo span{color:var(--dusty);font-style:italic}
+.nav-links{display:flex;gap:2.5rem;align-items:center}
+.nav-links a{font-size:.75rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:var(--dusty)}
+.nav-cta{background:var(--dusty)!important;color:var(--white)!important;padding:.55rem 1.5rem!important;border-radius:50px!important;font-size:.74rem!important;font-weight:600!important;letter-spacing:.1em!important;box-shadow:0 4px 16px rgba(196,120,143,.3)!important;transition:background .2s,transform .2s!important}
+.nav-cta:hover{background:var(--wine)!important;transform:translateY(-1px)!important}
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer}
+.nav-toggle span{display:block;width:22px;height:1.5px;background:var(--plum)}
+
+/* FLOATING BADGE */
+.float-badge{position:fixed;bottom:2rem;right:2rem;z-index:299;display:flex;align-items:center;gap:.55rem;background:var(--dusty);color:var(--white);padding:.65rem 1.2rem;border-radius:50px;font-size:.74rem;font-weight:500;letter-spacing:.08em;box-shadow:0 8px 28px rgba(196,120,143,.4);transition:transform .2s;animation:slideUp .6s 1.5s both}
+.float-badge:hover{transform:translateY(-2px)}
+.avail-dot{width:7px;height:7px;border-radius:50%;background:#a8e6cf;animation:pulse 2.2s infinite;flex-shrink:0}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes slideUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+
+/* HERO */
+#hero{min-height:100vh;display:flex;align-items:center;padding-top:6rem;position:relative;overflow:hidden}
+.hp{position:absolute;border-radius:50%;pointer-events:none;filter:blur(70px)}
+.hp1{width:700px;height:700px;background:radial-gradient(circle,rgba(237,168,190,.35),transparent 65%);top:-200px;right:-150px;animation:pd 14s ease-in-out infinite alternate}
+.hp2{width:450px;height:450px;background:radial-gradient(circle,rgba(201,149,106,.18),transparent 65%);bottom:-100px;left:-80px;animation:pd 18s ease-in-out 4s infinite alternate-reverse}
+.hp3{width:350px;height:350px;background:radial-gradient(circle,rgba(247,214,224,.6),transparent 65%);top:25%;left:40%;animation:pd 11s ease-in-out 2s infinite alternate}
+@keyframes pd{0%{transform:translate(0,0) scale(1)}100%{transform:translate(25px,35px) scale(1.06)}}
+.da{position:absolute;border-radius:50%;background:var(--rose);pointer-events:none}
+.da1{width:6px;height:6px;top:20%;left:8%;opacity:.4;animation:fd 6s ease-in-out infinite alternate}
+.da2{width:4px;height:4px;top:60%;left:15%;opacity:.3;animation:fd 8s ease-in-out 2s infinite alternate-reverse}
+.da3{width:8px;height:8px;top:35%;right:10%;opacity:.35;animation:fd 7s ease-in-out 1s infinite alternate}
+.da4{width:5px;height:5px;bottom:25%;right:20%;opacity:.4;animation:fd 9s ease-in-out 3s infinite alternate-reverse}
+@keyframes fd{0%{transform:translateY(0)}100%{transform:translateY(-12px)}}
+.hero-grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:5rem;align-items:center;position:relative;z-index:1}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--dusty);margin-bottom:1.3rem}
+.hero-eyebrow::before,.hero-eyebrow::after{content:'✦';font-size:.5rem;color:var(--rose)}
+.hero h1{margin-bottom:1.5rem;color:var(--plum)}
+.hero h1 em{font-style:italic;color:var(--dusty)}
+.uw{position:relative;display:inline-block}
+.uw::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:2px;background:linear-gradient(to right,var(--rose),var(--dusty));border-radius:2px;transform:scaleX(0);transform-origin:left;animation:dl .9s .7s forwards}
+@keyframes dl{to{transform:scaleX(1)}}
+.hero-sub{font-size:1.05rem;line-height:1.82;max-width:470px;margin-bottom:2.5rem;color:var(--plum-soft)}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
+.btn-primary{display:inline-flex;align-items:center;gap:.6rem;background:var(--dusty);color:var(--white);padding:.9rem 2.1rem;border-radius:50px;font-family:'Jost',sans-serif;font-size:.87rem;font-weight:500;letter-spacing:.06em;box-shadow:0 6px 22px rgba(196,120,143,.35);transition:background .25s,transform .2s,box-shadow .25s}
+.btn-primary:hover{background:var(--wine);transform:translateY(-2px);box-shadow:0 10px 30px rgba(139,52,85,.35)}
+.btn-ghost{display:inline-flex;align-items:center;gap:.5rem;color:var(--dusty);font-size:.87rem;font-weight:500;border:1.5px solid var(--border-rose);padding:.88rem 1.6rem;border-radius:50px;transition:background .2s,border-color .2s}
+.btn-ghost:hover{background:var(--petal);border-color:var(--rose)}
+.hero-visual{position:relative;display:flex;justify-content:center}
+.photo-frame{width:100%;max-width:360px;aspect-ratio:3/4;background:linear-gradient(150deg,#FAE4EA,#F7D6E0 60%,#F0C4D4);border-radius:40px 40px 40px 12px;border:1px solid var(--border-rose);position:relative;overflow:visible;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.7rem}
+.photo-placeholder{display:flex;flex-direction:column;align-items:center;gap:.6rem;color:var(--dusty)}
+.photo-placeholder p{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;color:var(--muted)}
+.frame-bow{position:absolute;top:-1.5rem;right:-1.5rem;width:48px;height:48px;background:linear-gradient(135deg,var(--rose),var(--dusty));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;box-shadow:0 4px 16px rgba(196,120,143,.4);animation:spin-slow 12s linear infinite}
+@keyframes spin-slow{to{transform:rotate(360deg)}}
+.proof-card{position:absolute;background:var(--white);border:1px solid var(--border-rose);border-radius:16px;padding:.9rem 1.15rem;box-shadow:0 8px 28px rgba(61,26,38,.08);display:flex;align-items:center;gap:.7rem;white-space:nowrap}
+.pc-1{top:1.8rem;right:-4rem;animation:pf 5s ease-in-out infinite alternate}
+.pc-2{bottom:3.5rem;left:-4rem;animation:pf 7s ease-in-out 2s infinite alternate-reverse}
+@keyframes pf{0%{transform:translateY(0)}100%{transform:translateY(-10px)}}
+.pci{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.pci.pink{background:var(--petal)}.pci.gold{background:var(--gold-lt)}
+.pct .pnum{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:500;color:var(--plum);display:block;line-height:1}
+.pct .plbl{font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+
+/* RESULTS RIBBON */
+#results{padding:0;background:linear-gradient(135deg,var(--wine),#5C2035 50%,var(--wine))}
+.results-inner{display:grid;grid-template-columns:repeat(4,1fr)}
+.ri{padding:3rem 2rem;text-align:center;border-right:1px solid rgba(255,255,255,.1);transition:background .3s}
+.ri:last-child{border-right:none}
+.ri:hover{background:rgba(255,255,255,.05)}
+.rnum{font-family:'Cormorant Garamond',serif;font-size:3.2rem;font-weight:400;line-height:1;display:block;margin-bottom:.25rem}
+.rnum.pink{color:#F9C4D8}.rnum.gold{color:#F0D4A0}.rnum.rose{color:var(--rose)}.rnum.cream{color:#FBF0F3}
+.rdesc{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.4);font-weight:500}
+
+/* SECTION HEADER */
+.s-label{display:inline-flex;align-items:center;gap:.5rem;font-size:.68rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--dusty);margin-bottom:.85rem}
+.s-label::before{content:'✦';font-size:.45rem}
+.s-hdr{margin-bottom:4rem}
+.s-hdr h2{margin-bottom:.65rem}
+.s-hdr p{max-width:560px;font-size:1.05rem;line-height:1.78}
+
+/* SERVICES */
+#services{background:var(--cream)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.sc{border-radius:var(--rr);padding:2.2rem;border:1px solid var(--border-rose);background:var(--white);position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s,background .25s}
+.sc:hover{transform:translateY(-4px);box-shadow:0 16px 44px rgba(61,26,38,.08);background:var(--blush)}
+.sc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:var(--rr) var(--rr) 0 0}
+.sc-1::before{background:linear-gradient(to right,#EDA8BE,#D4788F)}
+.sc-2::before{background:linear-gradient(to right,#D4788F,#C9956A)}
+.sc-3::before{background:linear-gradient(to right,#C9956A,#D4788F)}
+.sc-4::before{background:linear-gradient(to right,#8B5E7A,#C25A75)}
+.sc-5::before{background:linear-gradient(to right,#C25A75,#8B3455)}
+.sc-icon{width:44px;height:44px;border-radius:12px;background:var(--petal);display:flex;align-items:center;justify-content:center;font-size:1.25rem;margin-bottom:1.15rem}
+.sc h3{font-size:1.1rem;font-weight:500;margin-bottom:.8rem;color:var(--plum)}
+.sc ul{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+.sc li{font-size:.87rem;color:var(--plum-soft);padding-left:1.1rem;position:relative;line-height:1.55;font-weight:300}
+.sc li::before{content:'–';position:absolute;left:0;top:0;color:var(--rose);font-weight:400;line-height:1.55}
+
+/* PROCESS */
+#process{background:var(--blush-deep)}
+.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;position:relative}
+.proc-grid::before{content:'';position:absolute;top:2.3rem;left:12.5%;right:12.5%;height:1px;background:linear-gradient(to right,var(--rose),var(--dusty),var(--gold),var(--rose));opacity:.3}
+.step{text-align:center;padding:2rem 1.4rem;background:var(--white);border:1px solid var(--border-rose);border-radius:var(--rr);transition:box-shadow .25s,transform .25s}
+.step:hover{box-shadow:0 10px 32px rgba(61,26,38,.07);transform:translateY(-3px)}
+.step-n{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--rose),var(--dusty));display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:500;color:var(--white);margin:0 auto 1rem;box-shadow:0 4px 14px rgba(196,120,143,.35)}
+.step h3{font-size:1rem;font-weight:500;margin-bottom:.45rem;color:var(--plum)}
+.step p{font-size:.83rem;line-height:1.65;font-weight:300}
+
+/* PORTFOLIO */
+#portfolio{background:var(--cream)}
+.port-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;margin-top:3rem}
+.proj{border-radius:var(--rr);overflow:hidden;border:1px solid var(--border-rose);background:var(--white);transition:transform .3s,box-shadow .3s}
+.proj:hover{transform:translateY(-5px);box-shadow:0 20px 52px rgba(61,26,38,.1)}
+/* last card centered if odd */
+.proj.centered{grid-column:1/-1;max-width:580px;margin:0 auto;width:100%}
+.proj-img{aspect-ratio:16/9;position:relative;display:flex;align-items:center;justify-content:center}
+.proj:nth-child(1) .proj-img{background:linear-gradient(135deg,#FBDCE8,#F5C4D6)}
+.proj:nth-child(2) .proj-img{background:linear-gradient(135deg,#F9E4D4,#F5D4C0)}
+.proj:nth-child(3) .proj-img{background:linear-gradient(135deg,#EDE0F0,#E4D0EA)}
+.proj:nth-child(4) .proj-img{background:linear-gradient(135deg,#E4EFE4,#CCE3CC)}
+.proj:nth-child(5) .proj-img{background:linear-gradient(135deg,#FAEADA,#F5DCC8)}
+.proj-img-inner{display:flex;flex-direction:column;align-items:center;gap:.6rem}
+.proj-icon-wrap{width:60px;height:60px;border-radius:16px;background:rgba(255,255,255,.65);display:flex;align-items:center;justify-content:center;font-size:1.8rem}
+.proj-img-inner span{font-size:.63rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500;opacity:.5}
+.proj:nth-child(1) .proj-img-inner span{color:var(--wine)}
+.proj:nth-child(2) .proj-img-inner span{color:var(--gold)}
+.proj:nth-child(3) .proj-img-inner span{color:var(--plum)}
+.proj:nth-child(4) .proj-img-inner span{color:#3A6B3A}
+.proj:nth-child(5) .proj-img-inner span{color:var(--dusty)}
+.proj-cat{position:absolute;top:1rem;left:1rem;font-size:.63rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:.28rem .75rem;border-radius:50px;background:rgba(255,255,255,.75);color:var(--plum-soft)}
+.proj-body{padding:1.8rem}
+.proj-no{font-family:'Cormorant Garamond',serif;font-size:.85rem;font-style:italic;color:var(--muted);display:block;margin-bottom:.3rem;font-weight:300}
+.proj-body h3{font-size:1.2rem;font-weight:500;color:var(--plum);margin-bottom:.6rem}
+.proj-body p{font-size:.88rem;line-height:1.7;margin-bottom:1.2rem;font-weight:300}
+.proj-tags{display:flex;flex-wrap:wrap;gap:.4rem}
+.ptag{font-size:.67rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;padding:.28rem .7rem;border-radius:50px;background:var(--petal);color:var(--dusty)}
+.ptag.green{background:#D4E8D4;color:#2D5A2D}
+
+/* TOOLS */
+#tools{background:var(--blush)}
+.tools-row{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-top:3rem}
+.tool-pill{display:flex;align-items:center;gap:.7rem;background:var(--white);border:1px solid var(--border-rose);border-radius:50px;padding:.7rem 1.4rem;transition:border-color .2s,box-shadow .2s,transform .2s}
+.tool-pill:hover{border-color:var(--rose);box-shadow:0 4px 20px rgba(196,120,143,.18);transform:translateY(-2px)}
+.t-icon{font-size:1.15rem}
+.t-name{font-size:.82rem;font-weight:500;color:var(--plum-soft)}
+
+/* TESTIMONIALS */
+#testimonials{background:var(--cream)}
+.testi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-top:3rem;max-width:900px}
+.tcard{background:var(--blush);border:1px solid var(--border-rose);border-radius:var(--rr);padding:2rem;transition:transform .25s,box-shadow .25s;position:relative}
+.tcard::before{content:'\201C';position:absolute;top:1.2rem;right:1.5rem;font-family:'Cormorant Garamond',serif;font-size:5rem;line-height:1;font-weight:300;color:var(--petal);pointer-events:none}
+.tcard:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(61,26,38,.07)}
+.t-stars{display:flex;gap:.2rem;margin-bottom:.9rem}
+.t-stars span{color:var(--gold);font-size:.88rem}
+.t-quote{font-family:'Cormorant Garamond',serif;font-size:1.08rem;font-weight:300;font-style:italic;line-height:1.72;color:var(--plum);margin-bottom:1.4rem}
+.t-author{display:flex;align-items:center;gap:.75rem}
+.t-avatar{width:40px;height:40px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--white);font-weight:500}
+.tcard:nth-child(1) .t-avatar{background:linear-gradient(135deg,var(--wine),#3D1A26)}
+.tcard:nth-child(2) .t-avatar{background:linear-gradient(135deg,var(--rose),var(--dusty))}
+.tcard:nth-child(3) .t-avatar{background:linear-gradient(135deg,var(--gold),#A8702A)}
+.t-name{font-weight:500;font-size:.88rem;color:var(--plum)}
+.t-role{font-size:.73rem;color:var(--muted);font-weight:300}
+.t-badge{display:inline-flex;align-items:center;gap:.3rem;font-size:.63rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--dusty);background:var(--petal);padding:.2rem .6rem;border-radius:50px;margin-top:.35rem}
+
+/* ABOUT */
+#about{background:var(--blush-deep)}
+.about-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:7rem;align-items:center}
+.about-photo{aspect-ratio:4/5;background:linear-gradient(150deg,#FBDCE8,#F5C4D6 60%,#EDACC4);border-radius:40px 12px 40px 12px;border:1px solid var(--border-rose);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.7rem}
+.about-photo p{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.about-photo::after{content:'🌸';position:absolute;bottom:1.2rem;right:1.2rem;font-size:2.5rem;opacity:.35}
+.about-content h2{margin-bottom:1.1rem;color:var(--plum)}
+.about-content h2 em{font-style:italic;color:var(--dusty)}
+.about-content p{font-size:1rem;line-height:1.85;margin-bottom:1rem;font-weight:300}
+.skill-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.5rem 0}
+.stag{font-size:.74rem;font-weight:500;padding:.32rem .85rem;border-radius:50px;letter-spacing:.04em}
+.st1{background:var(--petal);color:var(--dusty)}
+.st2{background:var(--gold-lt);color:var(--gold)}
+.st3{background:rgba(139,52,85,.1);color:var(--wine)}
+
+/* CONTACT */
+#contact{background:linear-gradient(160deg,#3D1A26,#5C2035 55%,#3D1A26);position:relative;overflow:hidden}
+.ct-blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.2}
+.ctb1{width:500px;height:500px;background:var(--rose);top:-150px;right:-100px}
+.ctb2{width:350px;height:350px;background:var(--gold);bottom:-100px;left:-80px}
+.ct-inner{display:grid;grid-template-columns:1fr 1fr;gap:8rem;align-items:start;position:relative;z-index:1}
+.ct-left h2{color:var(--white);margin-bottom:1rem}
+.ct-left h2 em{font-style:italic;color:#F9C4D8}
+.ct-left p{color:rgba(253,240,243,.55);font-size:1rem;line-height:1.78}
+.ct-links{margin-top:2.5rem;display:flex;flex-direction:column;gap:1rem}
+.clink{display:flex;align-items:center;gap:.9rem;padding:1rem 1.2rem;background:rgba(253,240,243,.07);border:1px solid rgba(237,168,190,.2);border-radius:14px;transition:background .2s,border-color .2s}
+.clink:hover{background:rgba(253,240,243,.11);border-color:rgba(237,168,190,.4)}
+.cl-ico{width:38px;height:38px;border-radius:10px;background:rgba(237,168,190,.2);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.cl-lbl{font-size:.63rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(253,240,243,.35);display:block;margin-bottom:.12rem}
+.cl-val{font-size:.9rem;color:rgba(253,240,243,.9);font-weight:400}
+.cl-val a{color:inherit;transition:color .2s}
+.cl-val a:hover{color:#F9C4D8}
+.fg{margin-bottom:1.1rem}
+.fg label{display:block;font-size:.67rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(253,240,243,.35);margin-bottom:.5rem}
+.fg input,.fg textarea{width:100%;background:rgba(253,240,243,.07);border:1px solid rgba(237,168,190,.18);border-radius:12px;padding:.85rem 1.1rem;color:rgba(253,240,243,.9);font-size:.9rem;font-family:'Jost',sans-serif;font-weight:300;outline:none;transition:border-color .2s,background .2s}
+.fg input::placeholder,.fg textarea::placeholder{color:rgba(253,240,243,.22)}
+.fg input:focus,.fg textarea:focus{border-color:rgba(237,168,190,.45);background:rgba(253,240,243,.1)}
+.fg textarea{resize:vertical;min-height:110px}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.btn-send{width:100%;padding:1rem;border:none;border-radius:50px;cursor:pointer;background:linear-gradient(135deg,var(--rose),var(--dusty));color:var(--white);font-family:'Jost',sans-serif;font-size:.9rem;font-weight:500;letter-spacing:.08em;box-shadow:0 4px 20px rgba(196,120,143,.4);transition:opacity .2s,transform .2s}
+.btn-send:hover{opacity:.9;transform:translateY(-2px)}
+
+/* FOOTER */
+footer{background:#200D13;padding:2rem 0;border-top:1px solid rgba(237,168,190,.1)}
+.fi{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.flogo{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:rgba(253,240,243,.4)}
+.flogo span{font-style:italic;color:var(--rose)}
+.fcopy{font-size:.72rem;color:rgba(253,240,243,.18);letter-spacing:.05em}
+.flinks{display:flex;gap:1.5rem}
+.flinks a{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(253,240,243,.3);transition:color .2s}
+.flinks a:hover{color:var(--rose)}
+
+/* ANIMATIONS */
+.fu{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.fu.in{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .hero-grid{gap:3rem}.about-grid{gap:4rem}.ct-inner{gap:4rem}
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .proc-grid{grid-template-columns:repeat(2,1fr)}.proc-grid::before{display:none}
+  .testi-grid{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  section{padding:5rem 0}
+  .hero-grid{grid-template-columns:1fr}.hero-visual{order:-1}
+  .photo-frame{max-width:260px;aspect-ratio:1/1}
+  .pc-1,.pc-2{display:none}
+  .results-inner{grid-template-columns:repeat(2,1fr)}
+  .svc-grid,.port-grid{grid-template-columns:1fr}
+  .proj.centered{max-width:100%}
+  .about-grid{grid-template-columns:1fr;gap:3rem}.about-photo{aspect-ratio:16/9}
+  .ct-inner{grid-template-columns:1fr;gap:3rem}.f2{grid-template-columns:1fr}
+  .proc-grid{grid-template-columns:1fr 1fr}
+  .nav-links{display:none}.nav-toggle{display:flex}
+  .nav-links.open{display:flex;flex-direction:column;gap:1.2rem;position:absolute;top:100%;left:0;right:0;background:var(--blush);padding:1.5rem 2rem;border-bottom:1px solid var(--border-rose)}
+  .float-badge{bottom:1rem;right:1rem}
+}
+</style>
+</head>
+<body>
+
+<!-- FLOATING BADGE -->
+<a href="#contact" class="float-badge">
+  <span class="avail-dot"></span> Available for Work
+</a>
+
+<!-- ═══ NAV ═══ -->
+<nav id="nav">
+  <div class="container">
+    <div class="nav-inner">
+
+      <!-- ========== EDIT YOUR NAME HERE ========== -->
+      <a href="#" class="nav-logo">Your Name <span>· VA</span></a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about">About</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#contact" class="nav-cta">Hire Me</a>
+      </div>
+      <div class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <div class="hp hp1"></div><div class="hp hp2"></div><div class="hp hp3"></div>
+  <div class="da da1"></div><div class="da da2"></div><div class="da da3"></div><div class="da da4"></div>
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <div class="hero-eyebrow fu">Virtual Assistant</div>
+        <h1 class="fu d1">
+          Virtual Assistant<br>
+          for <em>Organized</em> &amp;<br>
+          <span class="uw">Efficient</span> Business<br>
+          Operations
+        </h1>
+
+        <!-- ========== EDIT HERO DESCRIPTION HERE ========== -->
+        <p class="hero-sub fu d2">
+          I help business owners manage emails, calendars, client systems, and data — so they can focus on growth and productivity.
+        </p>
+
+        <div class="hero-actions fu d3">
+          <a href="#portfolio" class="btn-primary">
+            View My Work
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#contact" class="btn-ghost">Let's Talk</a>
+        </div>
+      </div>
+
+      <div class="hero-visual fu d2">
+        <div class="photo-frame">
+
+          <!-- ========== REPLACE THIS SVG WITH YOUR PHOTO ========== -->
+          <!-- To add your photo: delete the <div class="photo-placeholder">...</div> below -->
+          <!-- Then type: <img src="your-photo.jpg" style="width:100%;height:100%;object-fit:cover;border-radius:40px 40px 40px 12px;" /> -->
+          <div class="photo-placeholder">
+            <svg width="46" height="46" viewBox="0 0 46 46" fill="none"><circle cx="23" cy="16" r="8.5" stroke="#C25A75" stroke-width="1.6"/><path d="M6 43c0-9.389 7.611-17 17-17s17 7.611 17 17" stroke="#C25A75" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <p>Your Photo Here</p>
+          </div>
+
+          <div class="frame-bow">🌸</div>
+          <div class="proof-card pc-1">
+            <div class="pci pink">📋</div>
+            <div class="pct">
+              <!-- ========== EDIT STATS HERE ========== -->
+              <span class="pnum">50+</span>
+              <span class="plbl">Projects Done</span>
+            </div>
+          </div>
+          <div class="proof-card pc-2">
+            <div class="pci gold">⭐</div>
+            <div class="pct">
+              <span class="pnum">5.0</span>
+              <span class="plbl">Client Rating</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ RESULTS RIBBON ═══ -->
+<div id="results">
+  <div class="container">
+    <div class="results-inner">
+      <!-- ========== EDIT YOUR NUMBERS HERE ========== -->
+      <div class="ri fu"><span class="rnum pink"><span class="cn" data-t="50">0</span>+</span><span class="rdesc">Projects Completed</span></div>
+      <div class="ri fu d1"><span class="rnum gold"><span class="cn" data-t="20">0</span>+</span><span class="rdesc">Happy Clients</span></div>
+      <div class="ri fu d2"><span class="rnum rose"><span class="cn" data-t="3">0</span>+</span><span class="rdesc">Years Experience</span></div>
+      <div class="ri fu d3"><span class="rnum cream"><span class="cn" data-t="500">0</span>+</span><span class="rdesc">Hours Saved for Clients</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SERVICES ═══ -->
+<section id="services">
+  <div class="container">
+    <div class="s-hdr">
+      <div class="s-label fu">Services</div>
+      <h2 class="fu d1">What I Can <em style="font-style:italic;color:var(--dusty)">Do for You</em></h2>
+      <p class="fu d2">Comprehensive support across administration, research, data, and presentations — tailored to your business.</p>
+    </div>
+    <div class="svc-grid">
+
+      <!-- ========== EDIT SERVICE 1 HERE ========== -->
+      <div class="sc sc-1 fu">
+        <div class="sc-icon">📬</div>
+        <h3>Administrative &amp; Executive Support</h3>
+        <ul>
+          <li>Email management and inbox organization</li>
+          <li>Calendar management &amp; scheduling</li>
+          <li>Appointment coordination via Calendly</li>
+          <li>Administrative task management</li>
+        </ul>
+      </div>
+
+      <!-- ========== EDIT SERVICE 2 HERE ========== -->
+      <div class="sc sc-2 fu d1">
+        <div class="sc-icon">🔍</div>
+        <h3>Research &amp; Writing Support</h3>
+        <ul>
+          <li>Academic and professional research</li>
+          <li>Writing assistance and proofreading</li>
+          <li>Citation, referencing &amp; formatting</li>
+          <li>Low plagiarism &amp; AI score delivery</li>
+        </ul>
+      </div>
+
+      <!-- ========== EDIT SERVICE 3 HERE ========== -->
+      <div class="sc sc-3 fu d2">
+        <div class="sc-icon">📊</div>
+        <h3>Data &amp; Reporting</h3>
+        <ul>
+          <li>Data entry and data management</li>
+          <li>Data cleaning and organization</li>
+          <li>Data visualization (Excel / dashboards)</li>
+          <li>Lead generation &amp; prospect lists</li>
+        </ul>
+      </div>
+
+      <!-- ========== EDIT SERVICE 4 HERE ========== -->
+      <div class="sc sc-4 fu">
+        <div class="sc-icon">🖥️</div>
+        <h3>Presentations &amp; Communication</h3>
+        <ul>
+          <li>Professional slide decks (PowerPoint / Slides)</li>
+          <li>Google Forms &amp; survey creation</li>
+          <li>Document formatting and layout</li>
+          <li>Report writing and summaries</li>
+        </ul>
+      </div>
+
+      <!-- ========== EDIT SERVICE 5 HERE ========== -->
+      <div class="sc sc-5 fu d1">
+        <div class="sc-icon">⚙️</div>
+        <h3>Tools &amp; Productivity Systems</h3>
+        <ul>
+          <li>Google Workspace (Docs, Sheets, Drive)</li>
+          <li>File organization &amp; conversion</li>
+          <li>PDF to Word &amp; file management</li>
+          <li>Web &amp; market research</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ HOW I WORK ═══ -->
+<section id="process">
+  <div class="container">
+    <div class="s-hdr" style="text-align:center">
+      <div class="s-label fu" style="justify-content:center">My Process</div>
+      <h2 class="fu d1"><em style="font-style:italic;color:var(--dusty)">Simple</em> 4-Step Process</h2>
+      <p class="fu d2" style="margin:0 auto">No confusion, no guesswork — you know exactly what to expect from start to finish.</p>
+    </div>
+    <div class="proc-grid">
+      <div class="step fu"><div class="step-n">1</div><h3>Discovery Call</h3><p>We talk about your business, pain points, and exactly what you need. Free 30-minute consultation, no pressure.</p></div>
+      <div class="step fu d1"><div class="step-n">2</div><h3>Proposal &amp; Plan</h3><p>I send a clear proposal — scope of work, timeline, and pricing. No hidden fees, no surprises.</p></div>
+      <div class="step fu d2"><div class="step-n">3</div><h3>I Get to Work</h3><p>You focus on your business while I handle operations. Regular updates keep you informed every step.</p></div>
+      <div class="step fu d3"><div class="step-n">4</div><h3>Review &amp; Refine</h3><p>You review the deliverables. I adjust until everything is exactly right and you're fully satisfied.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PORTFOLIO ═══ -->
+<section id="portfolio">
+  <div class="container">
+    <div class="s-hdr">
+      <div class="s-label fu">Portfolio</div>
+      <h2 class="fu d1">Selected <em style="font-style:italic;color:var(--dusty)">Projects</em></h2>
+      <p class="fu d2">Real work, real results — a curated look at what I've built and delivered for clients.</p>
+    </div>
+    <div class="port-grid">
+
+      <!-- ========== EDIT PROJECT 1 HERE ========== -->
+      <div class="proj fu">
+        <div class="proj-img">
+          <span class="proj-cat">Research</span>
+          <div class="proj-img-inner">
+            <!-- ========== ADD PROJECT 1 PICTURE HERE ========== -->
+            <!-- Replace the lines below with: <img src="your-image.jpg" style="width:100%;height:100%;object-fit:cover;" /> -->
+            <div class="proj-icon-wrap">📝</div>
+            <span>Add your screenshot here</span>
+          </div>
+        </div>
+        <div class="proj-body">
+          <span class="proj-no">Project 01</span>
+          <!-- ========== EDIT PROJECT 1 TITLE HERE ========== -->
+          <h3>Academic Research Assistance &amp; Writing Support</h3>
+          <!-- ========== EDIT PROJECT 1 DESCRIPTION HERE ========== -->
+          <p>Provided end-to-end research support including sourcing credible references, structuring arguments, proofreading, and refining written content. Delivered consistently clean results with very low plagiarism and AI scores on Turnitin.</p>
+          <div class="proj-tags">
+            <!-- ========== EDIT PROJECT 1 TOOLS HERE ========== -->
+            <span class="ptag green">Research &amp; Writing</span>
+            <span class="ptag green">Turnitin</span>
+            <span class="ptag green">Google Scholar</span>
+            <span class="ptag green">Proofreading</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========== EDIT PROJECT 2 HERE ========== -->
+      <div class="proj fu d1">
+        <div class="proj-img">
+          <span class="proj-cat">Presentations</span>
+          <div class="proj-img-inner">
+            <!-- ========== ADD PROJECT 2 PICTURE HERE ========== -->
+            <div class="proj-icon-wrap">🖥️</div>
+            <span>Add your screenshot here</span>
+          </div>
+        </div>
+        <div class="proj-body">
+          <span class="proj-no">Project 02</span>
+          <h3>Professional Presentation Slides Design</h3>
+          <p>Designed clean, visually compelling presentation slides for clients across different industries. Structured information clearly for maximum audience impact using PowerPoint and Google Slides.</p>
+          <div class="proj-tags">
+            <span class="ptag">PowerPoint</span>
+            <span class="ptag">Google Slides</span>
+            <span class="ptag">Visual Design</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========== EDIT PROJECT 3 HERE ========== -->
+      <div class="proj fu">
+        <div class="proj-img">
+          <span class="proj-cat">Admin</span>
+          <div class="proj-img-inner">
+            <!-- ========== ADD PROJECT 3 PICTURE HERE ========== -->
+            <div class="proj-icon-wrap">📬</div>
+            <span>Add your screenshot here</span>
+          </div>
+        </div>
+        <div class="proj-body">
+          <span class="proj-no">Project 03</span>
+          <h3>Email &amp; Calendar Organization System</h3>
+          <p>Overhauled an executive's inbox and calendar using filters, labels, and scheduling rules — cutting response time and boosting workflow efficiency dramatically.</p>
+          <div class="proj-tags">
+            <span class="ptag">Gmail</span>
+            <span class="ptag">Google Calendar</span>
+            <span class="ptag">Calendly</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========== EDIT PROJECT 4 HERE ========== -->
+      <div class="proj fu d1">
+        <div class="proj-img">
+          <span class="proj-cat">Data</span>
+          <div class="proj-img-inner">
+            <!-- ========== ADD PROJECT 4 PICTURE HERE ========== -->
+            <div class="proj-icon-wrap">📊</div>
+            <span>Add your screenshot here</span>
+          </div>
+        </div>
+        <div class="proj-body">
+          <span class="proj-no">Project 04</span>
+          <h3>Data Management &amp; Excel Dashboard</h3>
+          <p>Cleaned and visualized 3,000+ records into an interactive Excel dashboard with KPI tracking, charts, and automated reporting for easy decision-making.</p>
+          <div class="proj-tags">
+            <span class="ptag">Excel</span>
+            <span class="ptag">Google Sheets</span>
+            <span class="ptag">Power Query</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========== EDIT PROJECT 5 HERE (CRM — last because still building experience) ========== -->
+      <div class="proj fu centered">
+        <div class="proj-img">
+          <span class="proj-cat">CRM</span>
+          <div class="proj-img-inner">
+            <!-- ========== ADD PROJECT 5 PICTURE HERE ========== -->
+            <div class="proj-icon-wrap">🧩</div>
+            <span>Add your screenshot here</span>
+          </div>
+        </div>
+        <div class="proj-body">
+          <span class="proj-no">Project 05</span>
+          <h3>CRM Setup &amp; Client Management System</h3>
+          <p>Assisted in setting up and organizing a CRM system to help manage client data, track interactions, and keep business operations running smoothly and efficiently.</p>
+          <div class="proj-tags">
+            <span class="ptag">HubSpot</span>
+            <span class="ptag">Google Sheets</span>
+            <span class="ptag">Client Tracking</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TOOLS ═══ -->
+<section id="tools">
+  <div class="container">
+    <div class="s-hdr" style="text-align:center">
+      <div class="s-label fu" style="justify-content:center">Tech Stack</div>
+      <h2 class="fu d1">Tools I Work With</h2>
+      <p class="fu d2" style="margin:0 auto">Fluent in the platforms that power modern business operations.</p>
+    </div>
+    <!-- ========== ADD OR REMOVE TOOLS HERE ========== -->
+    <div class="tools-row">
+      <div class="tool-pill fu"><span class="t-icon">📄</span><span class="t-name">Google Workspace</span></div>
+      <div class="tool-pill fu d1"><span class="t-icon">📊</span><span class="t-name">Microsoft Excel</span></div>
+      <div class="tool-pill fu d2"><span class="t-icon">📑</span><span class="t-name">PowerPoint</span></div>
+      <div class="tool-pill fu d3"><span class="t-icon">🧩</span><span class="t-name">HubSpot CRM</span></div>
+      <div class="tool-pill fu d4"><span class="t-icon">📅</span><span class="t-name">Calendly</span></div>
+      <div class="tool-pill fu"><span class="t-icon">✉️</span><span class="t-name">Gmail</span></div>
+      <div class="tool-pill fu d1"><span class="t-icon">🔗</span><span class="t-name">LinkedIn</span></div>
+      <div class="tool-pill fu d2"><span class="t-icon">📋</span><span class="t-name">Notion</span></div>
+      <div class="tool-pill fu d3"><span class="t-icon">📂</span><span class="t-name">Google Drive</span></div>
+      <div class="tool-pill fu d4"><span class="t-icon">🎓</span><span class="t-name">Google Scholar</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIALS ═══ -->
+<section id="testimonials">
+  <div class="container">
+    <div class="s-hdr">
+      <div class="s-label fu">Testimonials</div>
+      <h2 class="fu d1">What Clients <em style="font-style:italic;color:var(--dusty)">Say</em></h2>
+      <p class="fu d2">Kind words from real clients I've had the pleasure of working with.</p>
+    </div>
+    <div class="testi-grid">
+
+      <!-- ========== REAL TESTIMONIAL — MR. PRINCE ========== -->
+      <div class="tcard fu">
+        <div class="t-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <!-- ========== EDIT MR. PRINCE'S QUOTE HERE ========== -->
+        <p class="t-quote">"She assisted me with my third research work and the results were outstanding. The plagiarism score and AI detection score on Turnitin both came back impressively low. Her attention to detail and dedication to quality made the whole process smooth and stress-free. I highly recommend her."</p>
+        <div class="t-author">
+          <div class="t-avatar">P</div>
+          <div>
+            <!-- ========== EDIT MR. PRINCE'S DETAILS HERE ========== -->
+            <div class="t-name">Mr. Prince</div>
+            <div class="t-role">Research Client</div>
+            <span class="t-badge">✦ Verified Client</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========== REAL TESTIMONIAL — MRS. GRACE ========== -->
+      <div class="tcard fu d1">
+        <div class="t-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <!-- ========== EDIT MRS. GRACE'S QUOTE HERE ========== -->
+        <p class="t-quote">"Working with her has been an absolute pleasure. She handled my administrative tasks with such professionalism and efficiency — my workload felt so much lighter. She's reliable, organized, and truly goes above and beyond. I'm very pleased with everything she has done for me."</p>
+        <div class="t-author">
+          <div class="t-avatar">G</div>
+          <div>
+            <!-- ========== EDIT MRS. GRACE'S DETAILS HERE ========== -->
+            <div class="t-name">Mrs. Grace</div>
+            <div class="t-role">Administrative Support Client</div>
+            <span class="t-badge">✦ Verified Client</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ABOUT ═══ -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-photo fu">
+        <!-- ========== REPLACE THIS WITH YOUR ABOUT PHOTO ========== -->
+        <!-- Delete the svg and p below, then add: <img src="your-photo.jpg" style="width:100%;height:100%;object-fit:cover;" /> -->
+        <svg width="52" height="52" viewBox="0 0 52 52" fill="none"><circle cx="26" cy="18" r="10" stroke="#C25A75" stroke-width="1.7"/><path d="M6 48c0-11.046 8.954-20 20-20s20 8.954 20 20" stroke="#C25A75" stroke-width="1.7" stroke-linecap="round"/></svg>
+        <p>Your Photo Here</p>
+      </div>
+      <div class="about-content">
+        <div class="s-label fu">About Me</div>
+        <h2 class="fu d1">The Person Behind<br>the <em>Work</em></h2>
+
+        <!-- ========== EDIT YOUR BIO HERE ========== -->
+        <p class="fu d2">A detail-oriented and highly organized Virtual Assistant skilled in managing operations, organizing systems, research support, and delivering efficient administrative and data support.</p>
+        <p class="fu d3">I bring structure to busy businesses and individuals — whether that's a cluttered inbox, a research paper that needs polishing, a presentation that needs designing, or a dataset that needs clarity. My approach is proactive, precise, and always client-focused.</p>
+
+        <!-- ========== EDIT YOUR SKILL TAGS HERE — add or remove any ========== -->
+        <div class="skill-tags fu d3">
+          <span class="stag st1">Organized</span>
+          <span class="stag st3">Detail-Oriented</span>
+          <span class="stag st2">Research Savvy</span>
+          <span class="stag st1">Data-Driven</span>
+          <span class="stag st3">Proactive</span>
+          <span class="stag st2">Reliable</span>
+          <span class="stag st1">Presentation Pro</span>
+          <span class="stag st3">Client-Focused</span>
+        </div>
+        <div class="fu d4" style="margin-top:2rem">
+          <a href="#contact" class="btn-primary">
+            Work With Me
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<section id="contact">
+  <div class="ct-blob ctb1"></div>
+  <div class="ct-blob ctb2"></div>
+  <div class="container">
+    <div class="ct-inner">
+      <div class="ct-left fu">
+        <div class="s-label" style="color:#F9C4D8">Get In Touch</div>
+        <h2>Let's Work<br><em>Together</em></h2>
+        <p>Ready to take tasks off your plate? Reach out and let's talk about how I can support you.</p>
+        <div class="ct-links">
+
+          <!-- ========== EDIT YOUR EMAIL HERE ========== -->
+          <div class="clink">
+            <div class="cl-ico">✉️</div>
+            <div>
+              <span class="cl-lbl">Email Me</span>
+              <span class="cl-val"><a href="mailto:your@email.com">your@email.com</a></span>
+            </div>
+          </div>
+
+          <!-- ========== EDIT YOUR LINKEDIN HERE ========== -->
+          <div class="clink">
+            <div class="cl-ico">💼</div>
+            <div>
+              <span class="cl-lbl">LinkedIn</span>
+              <span class="cl-val"><a href="https://linkedin.com/in/your-profile" target="_blank">linkedin.com/in/your-profile</a></span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="fu d2">
+        <div class="f2">
+          <div class="fg"><label>First Name</label><input type="text" placeholder="Jane"/></div>
+          <div class="fg"><label>Last Name</label><input type="text" placeholder="Smith"/></div>
+        </div>
+        <div class="fg"><label>Email Address</label><input type="email" placeholder="jane@company.com"/></div>
+        <div class="fg"><label>What do you need help with?</label><input type="text" placeholder="e.g. research support, inbox management…"/></div>
+        <div class="fg"><label>Tell me more</label><textarea placeholder="Tell me about your project and the support you're looking for…"></textarea></div>
+        <button class="btn-send">Send Message 🌸</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="container">
+    <div class="fi">
+      <!-- ========== EDIT FOOTER NAME HERE ========== -->
+      <span class="flogo">Your Name <span>· Virtual Assistant</span></span>
+      <span class="fcopy">© 2025 Your Name. All rights reserved.</span>
+      <div class="flinks">
+        <a href="#services">Services</a>
+        <a href="#portfolio">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Hire Me</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Nav scroll
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+
+// Scroll reveal
+const obs=new IntersectionObserver(e=>{
+  e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('in')});
+},{threshold:.1});
+document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
+
+// Hero instant reveal
+window.addEventListener('load',()=>{
+  document.querySelectorAll('#hero .fu').forEach((el,i)=>
+    setTimeout(()=>el.classList.add('in'),120+i*110)
+  );
+});
+
+// Count-up animation
+const cobs=new IntersectionObserver(e=>{
+  e.forEach(x=>{
+    if(x.isIntersecting){
+      const el=x.target,t=+el.dataset.t,s=t/(1800/16);let c=0;
+      const tm=setInterval(()=>{c=Math.min(c+s,t);el.textContent=Math.floor(c);if(c>=t)clearInterval(tm)},16);
+      cobs.unobserve(el);
+    }
+  });
+},{threshold:.5});
+document.querySelectorAll('.cn').forEach(el=>cobs.observe(el));
+</script>
+</body>
+</html>
